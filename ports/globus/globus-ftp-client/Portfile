@@ -1,0 +1,29 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-ftp-client
+version             8.29
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GridFTP Client Library
+
+checksums           md5     95a98fcff415878c5aa3d0c49e9abb48 \
+                    rmd160  7e81f246082ea51dd82aaacfae0acf24a82e5481 \
+                    sha1    52f1fcfa34a4b819758574ffacf369cf52e176f1 \
+                    sha256  a2274484789b2bc28389e76f4618b0daa0d39204b4f500d37ab36651248b2ff5
+
+depends_lib         port:openssl \
+                    port:globus-common \
+                    port:globus-xio \
+                    port:globus-xio-popen-driver \
+                    port:globus-gsi-sysconfig \
+                    port:globus-gsi-callback \
+                    port:globus-gsi-credential \
+                    port:globus-gssapi-gsi \
+                    port:globus-ftp-control

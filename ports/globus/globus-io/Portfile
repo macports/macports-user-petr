@@ -1,0 +1,30 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-io
+version             11.5
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+description-append  Uniform I/O Interface
+
+long_description-append \
+    The Globus package `${globus.package}` contains \
+    a uniform I/O interface to stream and datagram style communication.
+
+checksums           md5     dcea91493dc498e882de198ac440ad37 \
+                    rmd160  34579cac5a8534f95a5468a25887d7a2336606b8 \
+                    sha1    9d11f87623d5287d39aeb90b3e9d11a3e52b348a \
+                    sha256  564d460b4cbfdf85cb2725f235a4b09dd6ee7d9d98cd0c1f607d723b7cd9e5a1
+
+depends_lib         port:globus-common \
+                    port:globus-xio \
+                    port:globus-gssapi-gsi \
+                    port:globus-gss-assist \
+                    port:globus-gssapi-error \
+                    port:globus-xio-gsi-driver

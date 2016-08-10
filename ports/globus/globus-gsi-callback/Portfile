@@ -1,0 +1,27 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gsi-callback
+version             5.8
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSI Callback Library
+
+checksums           md5     043671c7eac13b090459db3daedeea51 \
+                    rmd160  f72ca4be29bd7a06c7f6cf4e0c541113336ce060 \
+                    sha1    66eeabd03642809bd86bb33870d067b99b6e4bdb \
+                    sha256  480d4c52959b23aa5ba9fd7f54a4f53cc50636f8ef13dad694f1a40c27277969
+
+depends_lib         port:openssl \
+                    port:globus-gsi-proxy-ssl \
+                    port:globus-common \
+                    port:globus-gsi-openssl-error \
+                    port:globus-openssl-module \
+                    port:globus-gsi-cert-utils \
+                    port:globus-gsi-sysconfig

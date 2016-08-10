@@ -1,0 +1,24 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gass-server-ez
+version             5.7
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  Simple file server implementation using GASS Server API
+
+checksums           md5     3de99977416c21dc1045c9c49fc40d13 \
+                    rmd160  c0a45375ecc74ca03eae3a4c3d6879a46a277e15 \
+                    sha1    e26a1fa463ec08845cdaa7dc8fd9bb92c50e3ac2 \
+                    sha256  becea07a5ddd0f0719b08d40b8481ace1f72d7de9df1f449192562ef47c1b077
+
+depends_lib         port:globus-common \
+                    port:globus-gssapi-gsi \
+                    port:globus-gss-assist \
+                    port:globus-gass-transfer

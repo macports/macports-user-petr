@@ -1,0 +1,26 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gss-assist
+version             10.15
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSSAPI Assist Library
+
+checksums           md5     c64d647cda5b6cc018185b43e531be9b \
+                    rmd160  492dcec5833e8ef1f9c8809099cdf180fbd63679 \
+                    sha1    962af6dbfb86267877cee396b375b07d75d7ca6d \
+                    sha256  426b32b389baa7288ba2d8ed08af8a978be2a2117a78d953a3e1bafaf11ae5ea
+
+depends_lib         port:globus-common \
+                    port:globus-callout \
+                    port:globus-gsi-cert-utils \
+                    port:globus-gsi-sysconfig \
+                    port:globus-gsi-credential \
+                    port:globus-gssapi-gsi

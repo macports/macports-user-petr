@@ -1,0 +1,22 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-usage
+version             4.4
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  Usage Statistics Collector
+
+checksums           md5     52c3012404f072965f9ebccf2cb28813 \
+                    rmd160  a947982d4299243e019ab93d6b03771a2d9203ec \
+                    sha1    52fb58b73eea18a659e5289c6a7f2f5be229cfae \
+                    sha256  d12b2bd7160dd7666f6b120174d9859136f4230fac2da3ee50f3d8403870cae5
+
+depends_lib         port:globus-common \
+                    port:globus-xio

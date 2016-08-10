@@ -1,0 +1,32 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gram-client-tools
+version             11.8
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+description-append  GRAM Job Management Tools
+
+long_description-append \
+    The Globus package `${globus.package}` contains \
+    the client tools for the Resource Allocation Management System, \
+    e.g globusrun, globus-job-submit, etc.
+
+checksums           md5     bdb22c8cc64be3fb3158f67179101840 \
+                    rmd160  920580fb87243d0dcb86bad7a6df25b6c8e790fe \
+                    sha1    4ab23fec98f256fc234eda18baa6bda7b5bcc4b8 \
+                    sha256  4c50a1ea581dbac8c2c02f4b19d438c8216e206388448105d1c76dc1fd36e9bb
+
+depends_lib         port:globus-common \
+                    port:globus-rsl \
+                    port:globus-gss-assist \
+                    port:globus-gass-transfer \
+                    port:globus-gass-server-ez \
+                    port:globus-gram-protocol \
+                    port:globus-gram-client

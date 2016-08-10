@@ -1,0 +1,24 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gsi-sysconfig
+version             6.9
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSI System Config Library
+
+checksums           md5     2365d3a28114adeb668bd7b7e7f5d9da \
+                    rmd160  1a4bc51ca4b8984f96fdd3ce32d458673615c05b \
+                    sha1    b9aad1f193ab020dea9cd1171ed553df9d80744d \
+                    sha256  454a69397bf215f8cfa53e8a311844aff0114a90ba122753e71eefdb270d857f
+
+depends_lib         port:openssl \
+                    port:globus-common \
+                    port:globus-gsi-openssl-error \
+                    port:globus-openssl-module

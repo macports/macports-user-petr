@@ -1,0 +1,26 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-ftp-control
+version             7.2
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GridFTP Control Library
+
+checksums           md5     caf6bc61898bb3d28897709f6a231b71 \
+                    rmd160  8fd6b39f09501caa679b380de632ac745554b70f \
+                    sha1    5f310124d85ba33338f8a722f564e87192130950 \
+                    sha256  0a308e1bf45f85427e664bcea9087fb7b20c4a543e96ddb71d74cfe2eb20b7cd
+
+depends_lib         port:globus-common \
+                    port:globus-xio \
+                    port:globus-gssapi-gsi \
+                    port:globus-gss-assist \
+                    port:globus-gssapi-error \
+                    port:globus-io

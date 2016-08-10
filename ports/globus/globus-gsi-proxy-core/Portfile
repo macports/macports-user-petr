@@ -1,0 +1,29 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gsi-proxy-core
+version             7.9
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSI Proxy Core Library
+
+checksums           md5     1815152eca802960a9d0f271bdbbdfb0 \
+                    rmd160  89ce9efb9cb44387dc1e97387cf544ece0427278 \
+                    sha1    aa8e87a1156a599f591a23031966b61f7e7a7a9e \
+                    sha256  988cb4081e8459614ad0bac5b9b95c275d980c4f669b01588648d5d588d81510
+
+depends_lib         port:openssl \
+                    port:globus-common \
+                    port:globus-gsi-proxy-ssl \
+                    port:globus-gsi-openssl-error \
+                    port:globus-openssl-module \
+                    port:globus-gsi-cert-utils \
+                    port:globus-gsi-sysconfig \
+                    port:globus-gsi-callback \
+                    port:globus-gsi-credential

@@ -1,0 +1,21 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-xio
+version             5.12
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  XIO Framework
+
+checksums           md5     300593049e847f6061cd384b72d8ce6e \
+                    rmd160  138e53f73258eab5d42595238b314f4786e80098 \
+                    sha1    665312f1f6f4a4e86d4220b06c0076203f1c102b \
+                    sha256  2abf9c3b2c222f97f7ebfedcabffbcf44d4388cc5d2f2b5e9c96994695bb4109
+
+depends_lib         port:globus-common

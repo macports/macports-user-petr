@@ -1,0 +1,25 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gsi-cert-utils
+version             9.12
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSI Cert Utils Library
+
+checksums           md5     4ad58b76b0900d26998a28ef4040d434 \
+                    rmd160  013ad9e1a8aba2c111241a6d1744c7c0e8fc3e6c \
+                    sha1    29ca96a3048656fc15ee7a60de0658ca875b6f5c \
+                    sha256  bea64ea44ad360de02294642b0a3f931887272901041bb91be73707b6603c327
+
+depends_lib         port:openssl \
+                    port:globus-common \
+                    port:globus-gsi-proxy-ssl \
+                    port:globus-gsi-openssl-error \
+                    port:globus-openssl-module

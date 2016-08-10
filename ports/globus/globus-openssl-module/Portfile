@@ -1,0 +1,25 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-openssl-module
+version             4.6
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  OpenSSL Module Wrapper
+
+checksums           md5     564c0e1166231b2dde259145db234370 \
+                    rmd160  93d3f4b1127a50827edeb5cad2bce30709627ca7 \
+                    sha1    ebcca04242cbd4cd01ca1806b2d4cd68aca43641 \
+                    sha256  846883b3c6a6b50e7dff963f865c8345bf2e8a324680b53288dc1ceb5fd5c263
+
+depends_lib         port:openssl \
+                    port:globus-common \
+                    port:globus-gsi-proxy-ssl \
+                    port:globus-gsi-openssl-error
+

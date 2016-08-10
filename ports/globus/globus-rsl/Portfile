@@ -1,0 +1,21 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-rsl
+version             10.10
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  Resource Specification Language Library
+
+checksums           md5     fdd92faf48de84b165689569af020fd0 \
+                    rmd160  51dc3c9fb50a196e74b80a616736b6a3d2046c74 \
+                    sha1    f6c46ae913cd338458362fbeb172c8fe45556cbf \
+                    sha256  3f8ed965538163babedf1858cfe60b9cb9887f27bfa61a9cede88880368e2117
+
+depends_lib         port:globus-common

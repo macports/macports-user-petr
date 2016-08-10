@@ -1,0 +1,27 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-callout
+version             3.14
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+description-append  Callout Library
+
+long_description-append \
+    The Globus package `${globus.package}` contains \
+    the Callout Library, which provides a platform independent way for \
+    dealing with runtime loadable functions.
+
+checksums           md5     634b593399ae869dc65bbf9402c91d18 \
+                    rmd160  29f85f1a2dbf6a3da6e06a6551af41b8b0064b4a \
+                    sha1    1e26c061c8a94ddc274b2dca7152bbb53d64d8f3 \
+                    sha256  ea6f28d353dfde398471f77d98eee1064b07f03d896a6d7f52df063122382bfe
+
+depends_lib-append  port:libtool \
+                    port:globus-common

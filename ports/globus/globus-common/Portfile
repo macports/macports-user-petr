@@ -1,0 +1,25 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-common
+version             16.5
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+globus.perl         yes
+
+globus.description  Common Library and setup stuff
+
+checksums           md5     3ed2b3b2def3471b7825217009b8eb26 \
+                    rmd160  6e8934994b591caeb6035a83a53b76aba5944138 \
+                    sha1    30e1c91f5270b278224d73eec8840f62fb2f482f \
+                    sha256  0293356844cfc1129c882526fecfc9464a922465bada2d92c28b2d27963aa122
+
+depends_lib-append  port:libtool
+
+#                        port:p${perl_branch}-xml-dom \
+#                        port:p${perl_branch}-xml-parser

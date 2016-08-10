@@ -1,0 +1,27 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gsi-credential
+version             7.9
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSI Credential Library
+
+checksums           md5     5ba389ceb46178b5e36ea716ee94b90b \
+                    rmd160  24fc2e34ff8e814e4cdf752b8ffbad25ac941bac \
+                    sha1    0a635c33ec6c0c94677b2710f77dc5dec7268cc0 \
+                    sha256  a3b3d372797263c227f8543eb06af64ffe3746141ecf8541eb48a05f46d93046
+
+depends_lib         port:openssl \
+                    port:globus-common \
+                    port:globus-gsi-proxy-ssl \
+                    port:globus-gsi-openssl-error \
+                    port:globus-gsi-sysconfig \
+                    port:globus-gsi-cert-utils \
+                    port:globus-gsi-callback

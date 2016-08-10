@@ -1,0 +1,48 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gssapi-error
+version             5.4
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSSAPI Error Library
+
+checksums           md5     93f31aeb82fdaaac49ed15ee05f73441 \
+                    rmd160  d9ff8cc487196b1325f1a97acd3c9c43dde18238 \
+                    sha1    daa4ed9456c43d731500c515f8cb0e85ebd08e8f \
+                    sha256  ddbe38f759cbf603cc05759a4fbf295126a6ce892d3b4ae4d5ed8c3b9182af5e
+
+depends_lib         port:globus-common \
+                    port:globus-gssapi-gsi \
+                    port:globus-gss-assist
+
+# FIXME!
+# Fails to build without tracemode and if kerberos5 is installed.
+# Probably because the wrong gssapi.h is picked up.
+#
+# /opt/local/include/globus/gssapi.h is provided by: globus-gssapi-gsi
+# /opt/local/include/gssapi.h
+
+# FIXME!
+#globus-xio-gsi-driver
+#globus-io
+#globus-ftp-control
+#globus-ftp-client
+#globus-gass-transfer
+#globus-gass-copy
+#globus-gram-protocol
+#globus-gram-client             (no dpendent?)
+#globus-gram-client-tools       (no dependent?)
+#myproxy
+
+# WORKS!
+#globus-gass-server-ez
+#globus-proxy-utils 
+#
+# ?? globus-gss-assist

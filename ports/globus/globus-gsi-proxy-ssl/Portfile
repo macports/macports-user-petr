@@ -1,0 +1,21 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gsi-proxy-ssl
+version             5.8
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSI Proxy SSL Library
+
+checksums           md5     b90e3208bf952118c5dacd868676813d \
+                    rmd160  f8626489412641240f8054a2c82a1990155167f2 \
+                    sha1    9fe536125c2a38f093ca9c28bcf0f528ddaa64a9 \
+                    sha256  c92930dadc52ac0bd65c298c5b8d47b267d43806432fd7b9cd92df939dc35350
+
+depends_lib         port:openssl

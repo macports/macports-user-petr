@@ -1,0 +1,54 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                myproxy
+version             6.1.18
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  MyProxy Credential Management Service
+#The ${name} package contains: MyProxy Credential Management Service
+
+checksums           md5     0a0462dbdb3b378f182e21dd539c1c50 \
+                    rmd160  90d377720ec5dcdca4553dcea6f6cb578366132d \
+                    sha1    857c2f9b6d00d087cc1f38107b06bf624e2d7616 \
+                    sha256  2e86db8ec3047f9008caf95be0e48187232d1e5f60dca80a61d8a550f09daefd
+
+depends_lib-append  port:libtool
+
+# setup logical order ...
+depends_lib-append \
+    port:openssl \
+    port:globus-common \
+    port:globus-usage \
+    port:globus-gssapi-gsi \
+    port:globus-gss-assist \
+    \
+    port:globus-gsi-proxy-core \
+    port:globus-gsi-sysconfig \
+    port:globus-gsi-cert-utils \
+    port:globus-gsi-callback \
+    port:globus-gsi-credential \
+
+
+# Q: what about voms? (run or lib dependency?)
+#depends_run-append \
+#    port:globus-proxy-utils \
+#    port:voms
+
+
+#configure.post_args
+#--with-voms=${prefix} \
+
+#--enable-doxygen \
+# --with-docdir='\${datadir}/doc/${name}-${version}'
+
+
+# configure: 
+# WARNING: unrecognized options: --with-perlmoduledir, --disable-doxygen
+# from port group ???

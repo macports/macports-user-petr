@@ -1,0 +1,24 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gass-transfer
+version             8.9
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GASS Transfer Library
+
+checksums           md5     32c620b5a429e0fb127dd6b6ad2b084e \
+                    rmd160  f5e80ca245361aa3ecc814a478096cf87cfb990e \
+                    sha1    b6df8b9245689f74c4ef1020d146f9ae0d69c85e \
+                    sha256  40be6b8dfcd25f1351fcbac7144aa52344e1433bbef5d7da343fdb0fba8869bc
+
+depends_lib         port:globus-common \
+                    port:globus-gssapi-gsi \
+                    port:globus-gss-assist \
+                    port:globus-io

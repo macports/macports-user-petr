@@ -1,0 +1,22 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-xio-popen-driver
+version             3.5
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  XIO Pipe Open Driver
+
+checksums           md5     01f0a745a34e20827b8f9f60a85b42d2 \
+                    rmd160  c3c57cd3df330e79756af26042054ce47bf3e05e \
+                    sha1    59d38686cf97a408d723b3fc1f15c0f0b84dcd69 \
+                    sha256  0605891c9497263605c9f5620a2edebdf958d3462339abcbe4cb8337325adc2a
+
+depends_lib         port:globus-common \
+                    port:globus-xio

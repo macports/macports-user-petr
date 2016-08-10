@@ -1,0 +1,34 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           globus 1.0
+
+name                globus-gssapi-gsi
+version             12.1
+platforms           darwin
+maintainers         petr openmaintainer
+
+globus.setup
+
+globus.description  GSSAPI Library for GSI
+
+checksums           md5     d16d54c4bc3795609d947d959a5e37a1 \
+                    rmd160  4e3bd6f4701be61973ea2a5886938f596df183ab \
+                    sha1    14de9281958dbb4b879e16987bb91e5620bfdd09 \
+                    sha256  847fed2b67efec8268b52f7a84ec86c9b3b065b1680eda1d8a9dc5431df6bdd9
+
+depends_lib         port:openssl \
+                    port:globus-common \
+                    port:globus-gsi-proxy-ssl \
+                    port:globus-gsi-openssl-error \
+                    port:globus-openssl-module \
+                    port:globus-gsi-cert-utils \
+                    port:globus-gsi-sysconfig \
+                    port:globus-gsi-callback \
+                    port:globus-gsi-credential \
+                    port:globus-gsi-proxy-core
+
+# Avoid conflict with kerberos5: put `gssapi.h` in it's own directory
+configure.post_args \
+    --includedir=${prefix}/include/globus
